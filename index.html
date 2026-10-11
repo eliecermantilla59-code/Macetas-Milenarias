@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=35">
+<link rel="stylesheet" href="styles.css?v=36">
   <script>
     (function () {
       try {
@@ -104,7 +104,7 @@
           <label for="buyerMessage">Mensaje o detalles del pedido</label>
           <textarea id="buyerMessage" name="Mensaje" placeholder="Escribe qué maceta te interesa o tus dudas..."></textarea>
 
-          <button type="submit" class="btn btn-submit" id="buySubmit">Enviar pedido por correo</button>
+          <button type="submit" class="btn btn-submit" id="buySubmit">ENVIAR CORREO ELECTRONICO</button>
         </form>
       </div>
 
@@ -121,22 +121,6 @@
         </svg>
         LLAMAR AL 310 232 9150
       </a>
-    </section>
-
-    <!-- ESPECIFICACIONES -->
-    <section class="card">
-      <h2><span class="icon">&#128209;</span> Especificaciones</h2>
-      <p class="sub-title">Características técnicas del producto</p>
-      <table class="specs-table">
-        <tr><td>Material</td><td>Cemento y yeso, moldeado a mano con silicona</td></tr>
-        <tr><td>Elaboración</td><td>100% artesanal, piezas únicas</td></tr>
-        <tr><td>Altura</td><td>18 cm aprox.</td></tr>
-        <tr><td>Diámetro superior</td><td>15 cm aprox.</td></tr>
-        <tr><td>Peso</td><td>850 g aprox.</td></tr>
-        <tr><td>Acabado</td><td>Esmerilado y barnizado a mano</td></tr>
-        <tr><td>Drenaje</td><td>Sí, orificio inferior con rejilla</td></tr>
-        <tr><td>Uso</td><td>Interior y exterior</td></tr>
-      </table>
     </section>
 
     <!-- PRODUCTO -->
@@ -385,6 +369,22 @@
       <p id="copiado-msg" style="color: #1a9e4e; font-weight: bold; margin-top: 10px; display: none;">¡Enlace copiado al portapapeles!</p>
     </section>
 
+    <!-- ESPECIFICACIONES -->
+    <section class="card">
+      <h2><span class="icon">&#128209;</span> Especificaciones</h2>
+      <p class="sub-title">Características técnicas del producto</p>
+      <table class="specs-table">
+        <tr><td>Material</td><td>Cemento y yeso, moldeado a mano con silicona</td></tr>
+        <tr><td>Elaboración</td><td>100% artesanal, piezas únicas</td></tr>
+        <tr><td>Altura</td><td>18 cm aprox.</td></tr>
+        <tr><td>Diámetro superior</td><td>15 cm aprox.</td></tr>
+        <tr><td>Peso</td><td>850 g aprox.</td></tr>
+        <tr><td>Acabado</td><td>Esmerilado y barnizado a mano</td></tr>
+        <tr><td>Drenaje</td><td>Sí, orificio inferior con rejilla</td></tr>
+        <tr><td>Uso</td><td>Interior y exterior</td></tr>
+      </table>
+    </section>
+
     <footer class="main-footer">
       Macetas Milenarias &copy; 2026 &mdash; Una creación de Fabio Ardila y STUDIOS FAAS<br>
       Envíos a todo el país &nbsp;|&nbsp; Pago seguro &nbsp;|&nbsp; Garantía de satisfacción
@@ -452,7 +452,7 @@
           .catch(error => {
             if (button) {
               button.disabled = false;
-              button.textContent = "Enviar pedido por correo";
+              button.textContent = "ENVIAR CORREO ELECTRONICO";
             }
             alert("Error al enviar el mensaje. Inténtalo de nuevo o contáctanos por WhatsApp.");
           });
