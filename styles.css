@@ -1869,6 +1869,7 @@ header,
     object-position: center !important;
     border-radius: 0 !important;
     cursor: pointer;
+    clip-path: polygon(0 0, calc(100% - 35px) 0, 100% 35px, 100% 100%, 0 100%);
     transition: transform 0.4s ease;
 }
 
@@ -2221,7 +2222,7 @@ header,
     object-fit: contain !important;
     object-position: center !important;
     border-radius: 12px !important;
-    clip-path: polygon(0 0, 76% 0, 100% 24%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - 35px) 0, 100% 35px, 100% 100%, 0 100%);
     cursor: pointer;
 }
 
