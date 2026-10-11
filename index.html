@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=24">
+<link rel="stylesheet" href="styles.css?v=25">
   <script>
     (function () {
       try {
@@ -174,7 +174,7 @@
       <div class="creations-grid">
         <article class="creation-card">
           <div class="creation-media">
-            <img src="image_3a2b85.jpg" alt="Matera artesanal con detalles dorados y planta alta en el jardín - STUDIOS FAAS" loading="lazy" decoding="async">
+            <img src="imagen1.jpg" alt="Matera artesanal con detalles dorados en el jardín - STUDIOS FAAS" loading="lazy" decoding="async">
           </div>
           <div class="creation-body">
             <h3 class="creation-title">Matera con detalles dorados</h3>
@@ -183,15 +183,41 @@
         </article>
         <article class="creation-card">
           <div class="creation-media">
-            <img src="image_3a2f9d.jpg" alt="Matera dorada vacía sobre piedras rústicas - STUDIOS FAAS" loading="lazy" decoding="async">
+            <img src="imagen2.jpg" alt="Matera dorada artesanal de acabado premium - STUDIOS FAAS" loading="lazy" decoding="async">
           </div>
           <div class="creation-body">
-            <h3 class="creation-title">Matera dorada sobre piedras</h3>
-            <p class="creation-desc">Pieza dorada vacía presentada sobre piedras rústicas, acabado premium.</p>
+            <h3 class="creation-title">Matera dorada premium</h3>
+            <p class="creation-desc">Pieza dorada de acabado premium, perfecta para realzar cualquier espacio.</p>
           </div>
         </article>
       </div>
+      <div class="creations-actions">
+        <button type="button" class="btn-catalog" id="openCatalog" aria-haspopup="dialog" aria-controls="catalogModal">Ver catálogo completo</button>
+      </div>
     </section>
+
+    <!-- MODAL: CATÁLOGO COMPLETO -->
+    <div class="catalog-modal" id="catalogModal" role="dialog" aria-modal="true" aria-labelledby="catalogTitle" hidden>
+      <div class="catalog-overlay" data-close></div>
+      <div class="catalog-content" role="document">
+        <div class="catalog-head">
+          <h3 id="catalogTitle">Catálogo completo</h3>
+          <button type="button" class="catalog-close" id="closeCatalog" aria-label="Cerrar catálogo">&times;</button>
+        </div>
+        <div class="catalog-grid">
+          <a class="catalog-item" href="imagen1.jpg" target="_blank" rel="noopener"><img src="imagen1.jpg" alt="Maceta artesanal vista 1 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
+          <a class="catalog-item" href="imagen2.jpg" target="_blank" rel="noopener"><img src="imagen2.jpg" alt="Maceta artesanal vista 2 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
+          <a class="catalog-item" href="imagen3.jpg" target="_blank" rel="noopener"><img src="imagen3.jpg" alt="Maceta artesanal vista 3 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
+          <a class="catalog-item" href="imagen4.jpg" target="_blank" rel="noopener"><img src="imagen4.jpg" alt="Maceta artesanal vista 4 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
+          <a class="catalog-item" href="imagen5.jpg" target="_blank" rel="noopener"><img src="imagen5.jpg" alt="Maceta artesanal vista 5 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
+          <a class="catalog-item" href="imagen6.jpg" target="_blank" rel="noopener"><img src="imagen6.jpg" alt="Maceta artesanal vista 6 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
+          <a class="catalog-item" href="imagen7.jpg" target="_blank" rel="noopener"><img src="imagen7.jpg" alt="Maceta artesanal vista 7 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
+          <a class="catalog-item" href="imagen8.jpg" target="_blank" rel="noopener"><img src="imagen8.jpg" alt="Maceta artesanal vista 8 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
+          <a class="catalog-item" href="imagen9.jpg" target="_blank" rel="noopener"><img src="imagen9.jpg" alt="Maceta artesanal vista 9 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
+          <a class="catalog-item" href="imagen-comentario.jpg" target="_blank" rel="noopener"><img src="imagen-comentario.jpg" alt="Maceta artesanal de cliente - STUDIOS FAAS" loading="lazy" decoding="async"></a>
+        </div>
+      </div>
+    </div>
 
     <!-- ESPECIFICACIONES -->
     <section class="card">
@@ -562,6 +588,35 @@
         io.observe(els[k]);
       }
     });
+  </script>
+
+  <script>
+    (function () {
+      var modal = document.getElementById('catalogModal');
+      var openBtn = document.getElementById('openCatalog');
+      var closeBtn = document.getElementById('closeCatalog');
+      if (!modal || !openBtn) return;
+
+      function abrir() {
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        if (closeBtn) closeBtn.focus();
+      }
+      function cerrar() {
+        modal.hidden = true;
+        document.body.style.overflow = '';
+        openBtn.focus();
+      }
+
+      openBtn.addEventListener('click', abrir);
+      if (closeBtn) closeBtn.addEventListener('click', cerrar);
+      modal.addEventListener('click', function (e) {
+        if (e.target.hasAttribute('data-close')) cerrar();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !modal.hidden) cerrar();
+      });
+    })();
   </script>
 
   <footer class="footer-creditos">
