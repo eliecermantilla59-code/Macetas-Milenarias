@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=25">
+<link rel="stylesheet" href="styles.css?v=26">
   <script>
     (function () {
       try {
@@ -174,20 +174,20 @@
       <div class="creations-grid">
         <article class="creation-card">
           <div class="creation-media">
-            <img src="imagen1.jpg" alt="Matera artesanal con detalles dorados en el jardín - STUDIOS FAAS" loading="lazy" decoding="async">
+            <img src="Copilot_20261010_173033.jpg" alt="Matera Dorada en Jardín - STUDIOS FAAS" loading="lazy" decoding="async">
           </div>
           <div class="creation-body">
-            <h3 class="creation-title">Matera con detalles dorados</h3>
-            <p class="creation-desc">Matera artesanal con acabados dorados y planta alta, ideal para jardín.</p>
+            <h3 class="creation-title">Matera Dorada en Jardín</h3>
+            <p class="creation-desc">Matera artesanal dorada con planta alta, ideal para jardín y exteriores.</p>
           </div>
         </article>
         <article class="creation-card">
           <div class="creation-media">
-            <img src="imagen2.jpg" alt="Matera dorada artesanal de acabado premium - STUDIOS FAAS" loading="lazy" decoding="async">
+            <img src="Copilot_20261010_173049.jpg" alt="Matera Dorada Rústica - STUDIOS FAAS" loading="lazy" decoding="async">
           </div>
           <div class="creation-body">
-            <h3 class="creation-title">Matera dorada premium</h3>
-            <p class="creation-desc">Pieza dorada de acabado premium, perfecta para realzar cualquier espacio.</p>
+            <h3 class="creation-title">Matera Dorada Rústica</h3>
+            <p class="creation-desc">Acabado dorado rústico de estilo premium, perfecto para cualquier espacio.</p>
           </div>
         </article>
       </div>
@@ -205,6 +205,10 @@
           <button type="button" class="catalog-close" id="closeCatalog" aria-label="Cerrar catálogo">&times;</button>
         </div>
         <div class="catalog-grid">
+          <a class="catalog-item" href="Copilot_20261010_173027.jpg" target="_blank" rel="noopener"><img src="Copilot_20261010_173027.jpg" alt="Matera Dorada en Jardín - vista adicional - STUDIOS FAAS" loading="lazy" decoding="async"></a>
+          <a class="catalog-item" href="Copilot_20261010_170134.jpg" target="_blank" rel="noopener"><img src="Copilot_20261010_170134.jpg" alt="Matera Dorada Rústica - vista adicional - STUDIOS FAAS" loading="lazy" decoding="async"></a>
+          <a class="catalog-item" href="Copilot_20261010_165955.jpg" target="_blank" rel="noopener"><img src="Copilot_20261010_165955.jpg" alt="Matera artesanal dorada - escena de jardín - STUDIOS FAAS" loading="lazy" decoding="async"></a>
+          <a class="catalog-item" href="Copilot_20261010_165951.jpg" target="_blank" rel="noopener"><img src="Copilot_20261010_165951.jpg" alt="Matera artesanal dorada - escena de jardín - STUDIOS FAAS" loading="lazy" decoding="async"></a>
           <a class="catalog-item" href="imagen1.jpg" target="_blank" rel="noopener"><img src="imagen1.jpg" alt="Maceta artesanal vista 1 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
           <a class="catalog-item" href="imagen2.jpg" target="_blank" rel="noopener"><img src="imagen2.jpg" alt="Maceta artesanal vista 2 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
           <a class="catalog-item" href="imagen3.jpg" target="_blank" rel="noopener"><img src="imagen3.jpg" alt="Maceta artesanal vista 3 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
@@ -214,7 +218,9 @@
           <a class="catalog-item" href="imagen7.jpg" target="_blank" rel="noopener"><img src="imagen7.jpg" alt="Maceta artesanal vista 7 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
           <a class="catalog-item" href="imagen8.jpg" target="_blank" rel="noopener"><img src="imagen8.jpg" alt="Maceta artesanal vista 8 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
           <a class="catalog-item" href="imagen9.jpg" target="_blank" rel="noopener"><img src="imagen9.jpg" alt="Maceta artesanal vista 9 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
-          <a class="catalog-item" href="imagen-comentario.jpg" target="_blank" rel="noopener"><img src="imagen-comentario.jpg" alt="Maceta artesanal de cliente - STUDIOS FAAS" loading="lazy" decoding="async"></a>
+        </div>
+        <div class="catalog-foot">
+          <button type="button" class="btn-catalog-close" id="closeCatalogText">Cerrar</button>
         </div>
       </div>
     </div>
@@ -595,6 +601,7 @@
       var modal = document.getElementById('catalogModal');
       var openBtn = document.getElementById('openCatalog');
       var closeBtn = document.getElementById('closeCatalog');
+      var closeTextBtn = document.getElementById('closeCatalogText');
       if (!modal || !openBtn) return;
 
       function abrir() {
@@ -610,6 +617,7 @@
 
       openBtn.addEventListener('click', abrir);
       if (closeBtn) closeBtn.addEventListener('click', cerrar);
+      if (closeTextBtn) closeTextBtn.addEventListener('click', cerrar);
       modal.addEventListener('click', function (e) {
         if (e.target.hasAttribute('data-close')) cerrar();
       });
