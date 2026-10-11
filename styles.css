@@ -1834,8 +1834,9 @@ header,
 .creation-media img {
     display: block !important;
     width: 100% !important;
-    height: 260px !important;
-    object-fit: cover !important;
+    height: auto !important;
+    max-height: 520px;
+    object-fit: contain !important;
     object-position: center !important;
     border-radius: 0 !important;
     cursor: pointer;
@@ -1874,10 +1875,6 @@ header,
     .creations-grid {
         grid-template-columns: 1fr !important;
         gap: 15px !important;
-    }
-
-    .creation-media img {
-        height: 220px !important;
     }
 }
 
