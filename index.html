@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=26">
+<link rel="stylesheet" href="styles.css?v=27">
   <script>
     (function () {
       try {
@@ -192,38 +192,9 @@
         </article>
       </div>
       <div class="creations-actions">
-        <button type="button" class="btn-catalog" id="openCatalog" aria-haspopup="dialog" aria-controls="catalogModal">Ver catálogo completo</button>
+        <button type="button" class="btn-catalog" id="openCatalog" aria-haspopup="dialog" aria-controls="modal-catalogo">Ver catálogo completo</button>
       </div>
     </section>
-
-    <!-- MODAL: CATÁLOGO COMPLETO -->
-    <div class="catalog-modal" id="catalogModal" role="dialog" aria-modal="true" aria-labelledby="catalogTitle" hidden>
-      <div class="catalog-overlay" data-close></div>
-      <div class="catalog-content" role="document">
-        <div class="catalog-head">
-          <h3 id="catalogTitle">Catálogo completo</h3>
-          <button type="button" class="catalog-close" id="closeCatalog" aria-label="Cerrar catálogo">&times;</button>
-        </div>
-        <div class="catalog-grid">
-          <a class="catalog-item" href="Copilot_20261010_173027.jpg" target="_blank" rel="noopener"><img src="Copilot_20261010_173027.jpg" alt="Matera Dorada en Jardín - vista adicional - STUDIOS FAAS" loading="lazy" decoding="async"></a>
-          <a class="catalog-item" href="Copilot_20261010_170134.jpg" target="_blank" rel="noopener"><img src="Copilot_20261010_170134.jpg" alt="Matera Dorada Rústica - vista adicional - STUDIOS FAAS" loading="lazy" decoding="async"></a>
-          <a class="catalog-item" href="Copilot_20261010_165955.jpg" target="_blank" rel="noopener"><img src="Copilot_20261010_165955.jpg" alt="Matera artesanal dorada - escena de jardín - STUDIOS FAAS" loading="lazy" decoding="async"></a>
-          <a class="catalog-item" href="Copilot_20261010_165951.jpg" target="_blank" rel="noopener"><img src="Copilot_20261010_165951.jpg" alt="Matera artesanal dorada - escena de jardín - STUDIOS FAAS" loading="lazy" decoding="async"></a>
-          <a class="catalog-item" href="imagen1.jpg" target="_blank" rel="noopener"><img src="imagen1.jpg" alt="Maceta artesanal vista 1 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
-          <a class="catalog-item" href="imagen2.jpg" target="_blank" rel="noopener"><img src="imagen2.jpg" alt="Maceta artesanal vista 2 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
-          <a class="catalog-item" href="imagen3.jpg" target="_blank" rel="noopener"><img src="imagen3.jpg" alt="Maceta artesanal vista 3 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
-          <a class="catalog-item" href="imagen4.jpg" target="_blank" rel="noopener"><img src="imagen4.jpg" alt="Maceta artesanal vista 4 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
-          <a class="catalog-item" href="imagen5.jpg" target="_blank" rel="noopener"><img src="imagen5.jpg" alt="Maceta artesanal vista 5 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
-          <a class="catalog-item" href="imagen6.jpg" target="_blank" rel="noopener"><img src="imagen6.jpg" alt="Maceta artesanal vista 6 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
-          <a class="catalog-item" href="imagen7.jpg" target="_blank" rel="noopener"><img src="imagen7.jpg" alt="Maceta artesanal vista 7 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
-          <a class="catalog-item" href="imagen8.jpg" target="_blank" rel="noopener"><img src="imagen8.jpg" alt="Maceta artesanal vista 8 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
-          <a class="catalog-item" href="imagen9.jpg" target="_blank" rel="noopener"><img src="imagen9.jpg" alt="Maceta artesanal vista 9 - STUDIOS FAAS" loading="lazy" decoding="async"></a>
-        </div>
-        <div class="catalog-foot">
-          <button type="button" class="btn-catalog-close" id="closeCatalogText">Cerrar</button>
-        </div>
-      </div>
-    </div>
 
     <!-- ESPECIFICACIONES -->
     <section class="card">
@@ -596,37 +567,6 @@
     });
   </script>
 
-  <script>
-    (function () {
-      var modal = document.getElementById('catalogModal');
-      var openBtn = document.getElementById('openCatalog');
-      var closeBtn = document.getElementById('closeCatalog');
-      var closeTextBtn = document.getElementById('closeCatalogText');
-      if (!modal || !openBtn) return;
-
-      function abrir() {
-        modal.hidden = false;
-        document.body.style.overflow = 'hidden';
-        if (closeBtn) closeBtn.focus();
-      }
-      function cerrar() {
-        modal.hidden = true;
-        document.body.style.overflow = '';
-        openBtn.focus();
-      }
-
-      openBtn.addEventListener('click', abrir);
-      if (closeBtn) closeBtn.addEventListener('click', cerrar);
-      if (closeTextBtn) closeTextBtn.addEventListener('click', cerrar);
-      modal.addEventListener('click', function (e) {
-        if (e.target.hasAttribute('data-close')) cerrar();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && !modal.hidden) cerrar();
-      });
-    })();
-  </script>
-
   <footer class="footer-creditos">
     <span class="sep-creditos"></span>
     <p>Programado por Fabio Ardila y STUDIOS FAAS</p>
@@ -635,5 +575,55 @@
   <!-- Actualizacion forzada: 21-Sep-2026 -->
   <!-- Version: 2.0 - Alta Calidad Preloaded -->
   <!-- Versión Alta Calidad Preloaded - Fabio Ardila / STUDIOS FAAS -->
+
+  <!-- MODAL CATÁLOGO COMPLETO -->
+  <div id="modal-catalogo" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Catálogo Completo - STUDIOS FAAS</h2>
+        <button id="btn-cerrar-modal" class="btn-close" aria-label="Cerrar catálogo">&times;</button>
+      </div>
+      <div class="modal-body gallery-grid">
+        <div class="card"><img src="Copilot_20261010_173033.jpg" alt="Matera Dorada"><p>Matera Dorada en Jardín</p></div>
+        <div class="card"><img src="Copilot_20261010_173049.jpg" alt="Matera Dorada Rústica"><p>Matera Dorada Rústica</p></div>
+        <div class="card"><img src="Copilot_20261010_173027.jpg" alt="Matera Corona Rosa"><p>Matera Corona Rosa</p></div>
+        <div class="card"><img src="Copilot_20261010_170134.jpg" alt="Matera Corona Rosa 2"><p>Matera Corona Rosa Detalle</p></div>
+        <div class="card"><img src="Copilot_20261010_165955.jpg" alt="Matera Rubia"><p>Matera Rubia Serenidad</p></div>
+        <div class="card"><img src="Copilot_20261010_165951.jpg" alt="Matera Silencio Azul"><p>Matera Silencio Azul</p></div>
+        <div class="card"><img src="imagen1.jpg" alt="Modelo 1"><p>Modelo Artesanal 1</p></div>
+        <div class="card"><img src="imagen2.jpg" alt="Modelo 2"><p>Modelo Artesanal 2</p></div>
+        <div class="card"><img src="imagen3.jpg" alt="Modelo 3"><p>Modelo Artesanal 3</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var modal = document.getElementById('modal-catalogo');
+      var btnCerrar = document.getElementById('btn-cerrar-modal');
+      if (!modal) return;
+
+      function abrirModal() {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+      function cerrarModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('button').forEach(function (btn) {
+        if (btn.textContent.toUpperCase().indexOf('CATÁLOGO') !== -1) {
+          btn.addEventListener('click', abrirModal);
+        }
+      });
+
+      if (btnCerrar) btnCerrar.addEventListener('click', cerrarModal);
+      window.addEventListener('click', function (e) { if (e.target === modal) cerrarModal(); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') cerrarModal();
+      });
+    })();
+  </script>
 </body>
 </html>
