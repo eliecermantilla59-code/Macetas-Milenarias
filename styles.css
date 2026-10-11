@@ -1864,17 +1864,18 @@ header,
 .creation-media img {
     display: block !important;
     width: 100% !important;
-    height: 320px !important;
+    height: 340px !important;
     object-fit: cover !important;
-    object-position: center !important;
+    object-position: center center !important;
     border-radius: 0 !important;
     cursor: pointer;
     clip-path: polygon(0 0, calc(100% - 35px) 0, 100% 35px, 100% 100%, 0 100%);
+    transform: scale(1.08);
     transition: transform 0.4s ease;
 }
 
 .creation-card:hover .creation-media img {
-    transform: scale(1.06);
+    transform: scale(1.12);
 }
 
 .creation-body {
@@ -2217,12 +2218,12 @@ header,
 .gallery-grid img {
     display: block !important;
     width: 100% !important;
-    height: auto !important;
-    max-height: 280px;
-    object-fit: contain !important;
-    object-position: center !important;
+    height: 340px !important;
+    object-fit: cover !important;
+    object-position: center center !important;
     border-radius: 12px !important;
     clip-path: polygon(0 0, calc(100% - 35px) 0, 100% 35px, 100% 100%, 0 100%);
+    transform: scale(1.08);
     cursor: pointer;
 }
 
