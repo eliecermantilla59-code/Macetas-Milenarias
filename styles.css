@@ -1880,6 +1880,16 @@ header,
     transform: scale(1.12);
 }
 
+/* Tarjeta 1: encuadre natural con zoom minimo */
+.creation-card-first .creation-media img {
+    transform: scale(1.02);
+}
+
+/* Tarjeta 2: bisel superior derecho mas pronunciado para ocultar la marca */
+.creation-card-second .creation-media img {
+    clip-path: polygon(0 0, calc(100% - 45px) 0, 100% 45px, 100% 100%, 0 100%);
+}
+
 .creation-body {
     padding: 18px 18px 22px;
     display: flex;
