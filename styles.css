@@ -1885,10 +1885,10 @@ header,
     transform: scale(1.02);
 }
 
-/* Tarjeta 2: recorte diagonal de 50px EXCLUSIVO en la esquina superior derecha
+/* Tarjeta 2: recorte diagonal de 70px EXCLUSIVO en la esquina superior derecha
    (la zona recortada queda con el color del fondo de la tarjeta, sin parches). */
 .creation-card-second .creation-media img {
-    clip-path: polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - 70px) 0, 100% 70px, 100% 100%, 0 100%);
 }
 
 .creation-body {
