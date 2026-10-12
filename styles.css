@@ -1859,7 +1859,7 @@ header,
     width: 100%;
     aspect-ratio: 4 / 3;
     overflow: hidden;
-    background-color: #f8fafc;
+    background-color: var(--card-bg);
     position: relative;
 }
 
@@ -1885,9 +1885,22 @@ header,
     transform: scale(1.02);
 }
 
-/* Tarjeta 2: bisel superior derecho mas pronunciado para ocultar la marca */
+/* Tarjeta 2: bisel superior derecho de 35px para ocultar la marca, con parche del fondo */
 .creation-card-second .creation-media img {
-    clip-path: polygon(0 0, calc(100% - 45px) 0, 100% 45px, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - 35px) 0, 100% 35px, 100% 100%, 0 100%);
+}
+
+.creation-card-second .creation-media::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 30px;
+    background: var(--card-bg);
+    clip-path: polygon(0 0, calc(100% - 35px) 0, 100% 35px, 100% 100%, 0 100%);
+    z-index: 2;
+    pointer-events: none;
 }
 
 .creation-body {
